@@ -6,10 +6,15 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import javax.inject.Inject;
+
 public class MainActivity extends Activity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
-    private Car car;
+
+    // Field can not be private if need to be injected
+    @Inject
+    Car car;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,7 +23,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         CarComponent component = DaggerCarComponent.create();
-        car = component.getCar();
+        component.inject(this);
+
         car.drive();
     }
 }
