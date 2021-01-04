@@ -1,10 +1,12 @@
 package com.android.daggersample;
 
-import javax.inject.Inject;
-
 public class Wheels {
 
-    @Inject
-    public Wheels() {
+    Rims rims;
+    Tiers tiers;
+
+    public Wheels(Rims rims, Tiers tiers) {
+        this.rims = rims;
+        this.tiers = tiers;
     }
 }
