@@ -1,6 +1,6 @@
-package com.android.daggersample;
+package com.android.daggersample.car;
 
-import android.util.Log;
+import com.android.daggersample.Log;
 
 import javax.inject.Inject;
 

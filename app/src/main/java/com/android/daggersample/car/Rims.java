@@ -1,4 +1,4 @@
-package com.android.daggersample;
+package com.android.daggersample.car;
 
 public class Rims {
 

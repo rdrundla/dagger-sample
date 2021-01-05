@@ -1,4 +1,8 @@
-package com.android.daggersample;
+package com.android.daggersample.dagger;
+
+import com.android.daggersample.car.Rims;
+import com.android.daggersample.car.Tiers;
+import com.android.daggersample.car.Wheels;
 
 import dagger.Module;
 import dagger.Provides;

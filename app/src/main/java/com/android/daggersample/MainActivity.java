@@ -2,9 +2,12 @@ package com.android.daggersample;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
+
+import com.android.daggersample.car.Car;
+import com.android.daggersample.dagger.CarComponent;
+import com.android.daggersample.dagger.DaggerCarComponent;
 
 import javax.inject.Inject;
 

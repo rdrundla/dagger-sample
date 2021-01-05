@@ -1,6 +1,6 @@
-package com.android.daggersample;
+package com.android.daggersample.car;
 
-import android.util.Log;
+import com.android.daggersample.Log;
 
 import javax.inject.Inject;
 
@@ -23,6 +23,7 @@ public class Car {
     }
 
     public void drive() {
+        engine.start();
         Log.d(TAG, "drive: driving...");
     }
 }
