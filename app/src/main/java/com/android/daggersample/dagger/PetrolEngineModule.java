@@ -3,12 +3,19 @@ package com.android.daggersample.dagger;
 import com.android.daggersample.car.Engine;
 import com.android.daggersample.car.PetrolEngine;
 
-import dagger.Binds;
 import dagger.Module;
+import dagger.Provides;
 
 @Module
-public abstract class PetrolEngineModule {
+public class PetrolEngineModule {
+    private final int horsePower;
 
-    @Binds
-    abstract Engine bindEngine(PetrolEngine engine);
+    public PetrolEngineModule(int horsePower) {
+        this.horsePower = horsePower;
+    }
+
+    @Provides
+    Engine provideEngine() {
+        return new PetrolEngine(horsePower);
+    }
 }

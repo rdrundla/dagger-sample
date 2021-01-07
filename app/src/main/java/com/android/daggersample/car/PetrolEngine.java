@@ -7,12 +7,14 @@ import javax.inject.Inject;
 public class PetrolEngine implements Engine {
     private static final String TAG = PetrolEngine.class.getSimpleName();
 
-    @Inject
-    public PetrolEngine() {
+    private final int horsePower;
+
+    public PetrolEngine(int horsePower) {
+        this.horsePower = horsePower;
     }
 
     @Override
     public void start() {
-        Log.d(TAG, "start: PetrolEngine");
+        Log.d(TAG, "start: PetrolEngine... horsepower : " + horsePower);
     }
 }

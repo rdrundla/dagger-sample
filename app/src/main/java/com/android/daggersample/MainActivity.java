@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import com.android.daggersample.car.Car;
 import com.android.daggersample.dagger.CarComponent;
 import com.android.daggersample.dagger.DaggerCarComponent;
+import com.android.daggersample.dagger.PetrolEngineModule;
 
 import javax.inject.Inject;
 
@@ -25,7 +26,9 @@ public class MainActivity extends Activity {
         Log.d(TAG, "onCreate: ");
         setContentView(R.layout.activity_main);
 
-        CarComponent component = DaggerCarComponent.create();
+        CarComponent component = DaggerCarComponent.builder()
+                .petrolEngineModule(new PetrolEngineModule(1000))
+                .build();
         component.inject(this);
 
         car.drive();
