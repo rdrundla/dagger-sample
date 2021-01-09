@@ -8,7 +8,7 @@ import javax.inject.Named;
 import dagger.BindsInstance;
 import dagger.Component;
 
-@Component(modules = {WheelsModule.class, DieselEngineModule.class})
+@Component(modules = {WheelsModule.class, PetrolEngineModule.class})
 public interface CarComponent {
     Car getCar();
 

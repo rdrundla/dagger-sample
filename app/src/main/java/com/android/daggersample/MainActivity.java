@@ -8,7 +8,6 @@ import androidx.annotation.Nullable;
 import com.android.daggersample.car.Car;
 import com.android.daggersample.dagger.CarComponent;
 import com.android.daggersample.dagger.DaggerCarComponent;
-import com.android.daggersample.dagger.PetrolEngineModule;
 
 import javax.inject.Inject;
 
