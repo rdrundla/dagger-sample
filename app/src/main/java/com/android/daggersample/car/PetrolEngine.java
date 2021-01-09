@@ -9,12 +9,13 @@ public class PetrolEngine implements Engine {
 
     private final int horsePower;
 
+    @Inject
     public PetrolEngine(int horsePower) {
         this.horsePower = horsePower;
     }
 
     @Override
     public void start() {
-        Log.d(TAG, "start: PetrolEngine... horsepower : " + horsePower);
+        Log.d(TAG, "start: PetrolEngine... horsePower : " + horsePower);
     }
 }
