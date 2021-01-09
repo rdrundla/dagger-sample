@@ -17,7 +17,7 @@ public class MainActivity extends Activity {
 
     // Field can not be private if need to be injected
     @Inject
-    Car car;
+    Car car1, car2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
                 .build();
         component.inject(this);
 
-        car.drive();
+        car1.drive();
+        car2.drive();
     }
 }
