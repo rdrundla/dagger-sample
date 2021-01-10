@@ -1,9 +1,11 @@
 package com.android.daggersample.car;
 
 import com.android.daggersample.Log;
+import com.android.daggersample.dagger.ActivityScope;
 
 import javax.inject.Inject;
 
+@ActivityScope
 public class Car {
     private static final String TAG = Car.class.getSimpleName();
 

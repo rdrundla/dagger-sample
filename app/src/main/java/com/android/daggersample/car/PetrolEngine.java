@@ -21,7 +21,7 @@ public class PetrolEngine implements Engine {
     @Override
     public void start() {
         Log.d(TAG, "start: PetrolEngine... " +
-                "\nhorsePower : " + horsePower +
-                "\nengineCapacity : " + engineCapacity);
+                ", horsePower : " + horsePower +
+                ", engineCapacity : " + engineCapacity);
     }
 }
