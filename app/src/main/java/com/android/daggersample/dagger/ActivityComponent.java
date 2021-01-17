@@ -3,20 +3,16 @@ package com.android.daggersample.dagger;
 import com.android.daggersample.MainActivity;
 import com.android.daggersample.car.Car;
 
-import javax.inject.Named;
-
-import dagger.BindsInstance;
-import dagger.Component;
+import dagger.Subcomponent;
 
 @ActivityScope
-@Component(dependencies = AppComponent.class,
-        modules = {WheelsModule.class, PetrolEngineModule.class})
+@Subcomponent(modules = {WheelsModule.class, PetrolEngineModule.class})
 public interface ActivityComponent {
     Car getCar();
 
     void inject(MainActivity mainActivity);
 
-    @Component.Builder
+    /*@Component.Builder
     interface Builder {
 
         @BindsInstance
@@ -28,5 +24,5 @@ public interface ActivityComponent {
         Builder setAppComponent(AppComponent appComponent);
 
         ActivityComponent build();
-    }
+    }*/
 }
