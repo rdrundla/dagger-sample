@@ -26,10 +26,8 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         ActivityComponent component = ((DaggerApp) getApplication()).getAppComponent()
-                .getActivityComponentBuilder()
-                .horsePower(150)
-                .engineCapacity(2500)
-                .build();
+                .getActivityComponentFactory()
+                .create(150, 2000);
 
         component.inject(this);
 

@@ -29,6 +29,7 @@ public class Car {
 
     public void drive() {
         engine.start();
-        Log.d(TAG, "drive: Driver: " + driver.hashCode() + " Drives Car: " + this.hashCode());
+        Log.d(TAG, "drive: Driver: " + driver.getDriverName()
+                + " " + driver.hashCode() + " Drives Car: " + this.hashCode());
     }
 }

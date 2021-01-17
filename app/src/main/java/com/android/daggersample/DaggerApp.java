@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.android.daggersample.dagger.AppComponent;
 import com.android.daggersample.dagger.DaggerAppComponent;
+import com.android.daggersample.dagger.DriverModule;
 
 public class DaggerApp extends Application {
     private AppComponent appComponent;
@@ -11,7 +12,8 @@ public class DaggerApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        appComponent = DaggerAppComponent.create();
+        appComponent = DaggerAppComponent.factory()
+                .create(new DriverModule("Rd Rundla"));
     }
 
     public AppComponent getAppComponent() {

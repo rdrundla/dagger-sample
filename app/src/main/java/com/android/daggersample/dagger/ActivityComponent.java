@@ -15,7 +15,7 @@ public interface ActivityComponent {
 
     void inject(MainActivity mainActivity);
 
-    @Subcomponent.Builder
+/*    @Subcomponent.Builder
     interface Builder {
 
         @BindsInstance
@@ -25,5 +25,11 @@ public interface ActivityComponent {
         Builder engineCapacity(@Named("engine capacity") int engineCapacity);
 
         ActivityComponent build();
+    }*/
+
+    @Subcomponent.Factory
+    interface Factory {
+        ActivityComponent create(@BindsInstance @Named("horse power") int horsePower,
+                                 @BindsInstance @Named("engine capacity") int engineCapacity);
     }
 }
