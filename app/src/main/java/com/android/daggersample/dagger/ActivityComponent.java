@@ -3,16 +3,19 @@ package com.android.daggersample.dagger;
 import com.android.daggersample.MainActivity;
 import com.android.daggersample.car.Car;
 
+import javax.inject.Named;
+
+import dagger.BindsInstance;
 import dagger.Subcomponent;
 
 @ActivityScope
-@Subcomponent(modules = {WheelsModule.class, PetrolEngineModule.class})
+@Subcomponent(modules = {WheelsModule.class, DieselEngineModule.class})
 public interface ActivityComponent {
     Car getCar();
 
     void inject(MainActivity mainActivity);
 
-    /*@Component.Builder
+    @Subcomponent.Builder
     interface Builder {
 
         @BindsInstance
@@ -21,8 +24,6 @@ public interface ActivityComponent {
         @BindsInstance
         Builder engineCapacity(@Named("engine capacity") int engineCapacity);
 
-        Builder setAppComponent(AppComponent appComponent);
-
         ActivityComponent build();
-    }*/
+    }
 }

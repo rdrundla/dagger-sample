@@ -26,7 +26,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         ActivityComponent component = ((DaggerApp) getApplication()).getAppComponent()
-                .getActivityComponent(new PetrolEngineModule(150));
+                .getActivityComponentBuilder()
+                .horsePower(150)
+                .engineCapacity(2500)
+                .build();
 
         component.inject(this);
 
